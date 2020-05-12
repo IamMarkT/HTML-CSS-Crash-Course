@@ -1,0 +1,84 @@
+/* p.error{
+    color: red;
+}
+p.success{
+    color: lime;
+}
+
+p.success.feedback{
+    border: 1px dashed lime;
+}
+
+#content {
+    background-color: #ebebeb;
+    padding: 20px;
+} */
+
+
+/* 
+descendant selector / parent on left, child on the right
+div p {
+    color: red;
+}
+  */
+
+
+/* TWO DIFFERENT MEANINGS:
+    Top --> inside div with a child named error
+    Bottom --> div class named error
+*/
+/* div .error{
+    color: lavender;
+} 
+
+div.error{
+    color: orange;
+}  */
+
+
+
+/* a[href="www.youtube.com/"] EXACT MATCH
+a[href*="youtube"] CONTAINING KEYWORD
+a[href$=".com"] AT END OF VALUE */ 
+/* 
+a[href*="youtube"]{
+    background-color: lime;
+    color: navy;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a[href*="reddit"]{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-transform: lowercase;
+    border: 2px solid blue;
+} */
+
+/* INHERITANCE EXAMPLE 
+Not everything gets inherited, mainly font and color
+*/
+div{
+    color: coral;
+    border: 1px solid gray;
+    margin: 40px;
+    font-weight: bold;
+}
+
+div p{
+    /* will inherit from parent */
+    border: inherit;
+    margin: inherit;
+
+    /* will override inheritence  */
+    color: navy;
+}
+
+/* will take priority since bottom but specifics will retake
+"div p"  */
+p{
+    color: orange;
+}
+
